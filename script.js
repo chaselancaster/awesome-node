@@ -24,6 +24,13 @@ fs.writeFile('bye.text', 'Sad to see you go.', err => {
     }
 })
 
+// DELETE
+fs.unlink('./bye.text', err => {
+    if (err) {
+        console.log(err)
+    }
+})
+
 
 
 
