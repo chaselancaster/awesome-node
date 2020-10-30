@@ -7,4 +7,11 @@ fs.readFile('./hello.text', (err, data) => {
     console.log(data.toString())
 })
 
-fs.readFileSync('./hello.text')
+const file = fs.readFileSync('./hello.text')
+console.log(file.toString())
+
+fs.appendFile('./hello.text', ' This is so cool!', err => {
+    if (err) {
+        console.log(err)
+    }
+})
