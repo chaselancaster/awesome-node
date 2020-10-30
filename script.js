@@ -1,8 +1,10 @@
 const fs = require('fs');
 
-fs.readFile('', (err, data) => {
+fs.readFile('./hello.text', (err, data) => {
     if (err) {
         console.log('error')
     }
-    console.log(data)
+    console.log(data.toString())
 })
+
+fs.readFileSync('./hello.text')
